@@ -50,6 +50,9 @@ async function loadProducts() {
 
     productTable.innerHTML = '';
 
+    document.getElementById('productCount').textContent =
+        `${products.length} ${products.length === 1 ? 'produto' : 'produtos'}`;
+
     products.forEach(product => {
         const row = document.createElement('tr');
 
@@ -61,8 +64,17 @@ async function loadProducts() {
             <td>${product.quantity}</td>
             <td>R$ ${Number(product.price).toFixed(2)}</td>
             <td>
-                <button onclick="editProduct(${product.id})">Editar</button>
-                <button onclick="deleteProduct(${product.id})">Excluir</button>
+                <button
+                    class="action-button edit-button"
+                    onclick="editProduct(${product.id})">
+                    Editar
+                </button>
+
+                <button
+                    class="action-button delete-button"
+                    onclick="deleteProduct(${product.id})">
+                    Excluir
+                </button>
             </td>
         `;
 
