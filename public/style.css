@@ -59,6 +59,19 @@ body {
     font-size: 14px;
 }
 
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.uno-image {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -9,126 +10,156 @@
 
 <body>
 
-    <header class="header">
-        <div>
-            <h1>Teste estágio</h1>
-            <p>Gerenciamento de produtos</p>
+```
+<header class="header">
+    <div>
+        <h1>Product Manager</h1>
+        <p>Gerenciamento de produtos</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="form-card">
+
+       <div class="section-header">
+        <div class="section-title">
+            <img src="CAMINHO_DA_IMAGEM" alt="Uno" class="uno-image">
+
+            <div>
+                <h2>Novo produto</h2>
+                <p>Cadastre um novo produto no sistema</p>
+            </div>
         </div>
-    </header>
+    </div>
 
-    <main class="container">
+        <form id="productForm">
 
-        <section class="form-card">
-            <div class="section-header">
-                <div>
-                    <h2>Novo produto</h2>
-                    <p>Cadastre um novo produto no sistema</p>
-                </div>
-            </div>
+            <div class="form-grid">
 
-            <form id="productForm">
-
-                <div class="form-grid">
-
-                    <div class="form-group">
-                        <label for="user">Usuário</label>
-                        <input
-                            type="text"
-                            id="user"
-                            name="user"
-                            placeholder="Nome do usuário"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description">Descrição</label>
-                        <input
-                            type="text"
-                            id="description"
-                            name="description"
-                            placeholder="Descrição do produto"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="quantity">Quantidade</label>
-                        <input
-                            type="number"
-                            id="quantity"
-                            name="quantity"
-                            min="1"
-                            placeholder="0"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="price">Valor</label>
-                        <input
-                            type="number"
-                            id="price"
-                            name="price"
-                            min="0"
-                            step="0.01"
-                            placeholder="0,00"
-                            required
-                        >
-                    </div>
-
+                <div class="form-group">
+                    <label for="user">Usuário</label>
+                    <input
+                        type="text"
+                        id="user"
+                        name="user"
+                        placeholder="Nome do usuário"
+                        required
+                    >
                 </div>
 
-                <div class="form-actions">
-                    <button type="button" id="cancelButton" class="button secondary" hidden>
-                        Cancelar
-                    </button>
-
-                    <button type="submit" id="submitButton" class="button primary">
-                        Cadastrar produto
-                    </button>
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <input
+                        type="text"
+                        id="description"
+                        name="description"
+                        placeholder="Descrição do produto"
+                        required
+                    >
                 </div>
 
-            </form>
-        </section>
-
-
-        <section class="products-card">
-
-            <div class="section-header">
-                <div>
-                    <h2>Produtos cadastrados</h2>
-                    <p>Lista de produtos registrados no sistema</p>
+                <div class="form-group">
+                    <label for="quantity">Quantidade</label>
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        min="1"
+                        placeholder="0"
+                        required
+                    >
                 </div>
 
-                <span class="product-count" id="productCount">0 produtos</span>
-            </div>
-
-            <div class="table-wrapper">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Data de cadastro</th>
-                            <th>Usuário</th>
-                            <th>Descrição</th>
-                            <th>Quantidade</th>
-                            <th>Valor</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="productTable">
-                    </tbody>
-                </table>
+                <div class="form-group">
+                    <label for="price">Valor</label>
+                    <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        min="0"
+                        step="0.01"
+                        placeholder="0,00"
+                        required
+                    >
+                </div>
 
             </div>
 
-        </section>
+            <div class="form-actions">
 
-    </main>
+                <button
+                    type="button"
+                    id="cancelButton"
+                    class="button secondary"
+                    hidden
+                >
+                    Cancelar
+                </button>
 
-    <script src="script.js"></script>
+                <button
+                    type="submit"
+                    id="submitButton"
+                    class="button primary"
+                >
+                    Cadastrar produto
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <section class="products-card">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Produtos cadastrados</h2>
+                <p>Lista de produtos registrados no sistema</p>
+            </div>
+
+            <span
+                class="product-count"
+                id="productCount"
+            >
+                0 produtos
+            </span>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data de cadastro</th>
+                        <th>Usuário</th>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+```
+
 </body>
 </html>
