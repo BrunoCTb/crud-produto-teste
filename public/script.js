@@ -59,7 +59,7 @@ async function loadProducts() {
             <td>${product.user}</td>
             <td>${product.description}</td>
             <td>${product.quantity}</td>
-            <td>R$ ${product.price.toFixed(2)}</td>
+            <td>R$ ${Number(product.price).toFixed(2)}</td>
             <td>
                 <button onclick="editProduct(${product.id})">Editar</button>
                 <button onclick="deleteProduct(${product.id})">Excluir</button>
