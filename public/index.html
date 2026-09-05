@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <h1>Cadastro de Produtos</h1>
+
+    <h2>Novo Produto</h2>
+
+    <form id="produtoForm">
+
+        <div>
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" name="valor" min="0" step="0.01" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Produtos cadastrados</h2>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data de Cadastro</th>
+                <th>Usuário</th>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody id="produtosTabela">
+            <!-- ..data... -->
+            
+        </tbody>
+
+    </table>
+
+</body>
+</html>
