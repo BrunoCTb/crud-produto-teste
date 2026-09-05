@@ -7,6 +7,12 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
+const products = [];
+
+app.get('/api/products', (req, res) => {
+    res.json(products);
+});
+
 app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });
